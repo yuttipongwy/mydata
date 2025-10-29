@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>หน้าแรกของฉัน</title>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & base */
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body { font-family: 'Prompt', sans-serif; background: #f0f4f8; color: #333; }
+    a { text-decoration: none; color: inherit; }
+
+    /* Header */
+    header {
+      background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 600;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px 0;
+    }
+    nav a {
+      padding: 10px 20px;
+      border-radius: 20px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      background: #4facfe;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px 50px 20px;
+    }
+
+    /* Blog grid */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    /* Blog card */
+    .blog-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s, opacity 0.6s, transform 0.6s;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    .blog-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .blog-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .blog-card-content {
+      padding: 15px 20px;
+    }
+    .blog-card-content h3 {
+      margin-bottom: 10px;
+      color: #4facfe;
+    }
+    .blog-card-content p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #555;
+    }
+    .blog-card-content .read-more {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 6px 12px;
+      background: #00f2fe;
+      color: white;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+    .blog-card-content .read-more:hover {
+      background: #4facfe;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    หน้าแรกของฉัน
+  </header>
+
+  <nav>
+    <a href="#">หน้าแรก</a>
+    <a href="#">ข่าวสาร</a>
+    <a href="#">บทความ</a>
+    <a href="#">ติดต่อ</a>
+  </nav>
+
+  <div class="container">
+    <div class="blog-grid">
+      <div class="blog-card">
+        <img src="https://source.unsplash.com/400x300/?news" alt="ข่าว 1">
+        <div class="blog-card-content">
+          <h3>ข่าวเด่นวันนี้</h3>
+          <p>นี่คือรายละเอียดสั้น ๆ ของข่าวเด่นวันนี้ เพื่อดึงดูดผู้อ่านให้คลิกเข้ามาอ่านต่อ.</p>
+          <a href="#" class="read-more">อ่านต่อ</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <img src="https://source.unsplash.com/400x300/?technology" alt="ข่าว 2">
+        <div class="blog-card-content">
+          <h3>เทคโนโลยีใหม่</h3>
+          <p>อัปเดตข่าวสารและเทรนด์เทคโนโลยีล่าสุดให้ผู้อ่านได้ติดตามอย่างรวดเร็ว.</p>
+          <a href="#" class="read-more">อ่านต่อ</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <img src="https://source.unsplash.com/400x300/?education" alt="ข่าว 3">
+        <div class="blog-card-content">
+          <h3>บทความการศึกษา</h3>
+          <p>เนื้อหาการศึกษาและสาระความรู้ที่น่าสนใจ เพื่อเพิ่มคุณค่าให้ผู้เรียนทุกคน.</p>
+          <a href="#" class="read-more">อ่านต่อ</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <img src="https://source.unsplash.com/400x300/?lifestyle" alt="ข่าว 4">
+        <div class="blog-card-content">
+          <h3>ไลฟ์สไตล์และสุขภาพ</h3>
+          <p>เคล็ดลับการใช้ชีวิตและการดูแลสุขภาพที่เหมาะกับทุกเพศทุกวัย.</p>
+          <a href="#" class="read-more">อ่านต่อ</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 หน้าแรกของฉัน. สงวนลิขสิทธิ์.
+  </footer>
+
+  <script>
+    // Scroll animation
+    const cards = document.querySelectorAll('.blog-card');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    cards.forEach(card => {
+      observer.observe(card);
+    });
+  </script>
+
+</body>
+</html>
